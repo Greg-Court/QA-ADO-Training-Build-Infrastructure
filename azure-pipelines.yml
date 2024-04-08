@@ -6,7 +6,12 @@
 trigger:
 - master
 
-pool: OscarPool
+pool:
+  name: OscarPool
+  demands: 
+  - visualstudio
+  - msbuild
+  - vstest
 
 variables:
   solution: '**/*.sln'
